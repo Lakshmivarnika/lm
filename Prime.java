@@ -1,5 +1,5 @@
 
-class prime {
+class Prime {
     static boolean isPrime(int n)
     {
         
