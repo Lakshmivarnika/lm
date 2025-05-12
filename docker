@@ -1,0 +1,24 @@
+num1 = 10
+num2 = 25
+total = num1 + num2
+print("The sum of", num1, "and", num2, "is:", total)
+
+#Dockerfile
+FROM python:3.9
+WORKDIR /app
+COPY sum.py .
+CMD ["python", "sum.py"]
+
+In the terminal
+docker build -t mynew-img .
+docker images
+docker tag mynew-img:latest Keerthana048/img1
+docker login
+docker push Keerthana048/img1
+docker pull Keerthana048/img1:latest
+  
+#docker file-2
+FROM python:3.12.4-slim
+WORKDIR /app
+COPY sum.py /app
+CMD ["python", "sum.py"]
